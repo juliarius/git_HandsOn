@@ -7,7 +7,7 @@ if [[ $seq =~ ^[ACGTU]+$ ]]; then
   elif [[ $seq =~ U ]]; then
     echo "The sequence is RNA"
   else
-    echo "The sequence can be DNA or RNA"
+    echo "The sequence can be DNA or RNA" #prints the sequence can be dna or rna
   fi
 else
   echo "The sequence is not DNA nor RNA"
