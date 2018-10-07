@@ -1,6 +1,7 @@
-##I've used nano to create a new script named as seqClassexercise1.sh, we copied the initial content of seqClass.sh 
+#As our script couldn't deal with lower-case sequences, we fixed it by convering the sequences to upper-case before analyzing them. 
 #!/bin/bash
 seq=$1
+seq=$(echo $seq | tr a-z A-Z)  # upper-case convertion
 if [[ $seq =~ ^[ACGTU]+$ ]]; then
   if [[ $seq =~ T ]]; then
     echo "The sequence is DNA"
@@ -12,5 +13,4 @@ if [[ $seq =~ ^[ACGTU]+$ ]]; then
 else
   echo "The sequence is not DNA nor RNA"
 fi
-# after saving and closing  i'll give execution permissions with chmod +x seqClassexercise1.sh
 #we'll check if it works and if it does we will stage and commit the changes
