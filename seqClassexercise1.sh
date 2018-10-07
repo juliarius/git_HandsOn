@@ -1,4 +1,4 @@
-#As our script couldn't deal with lower-case sequences, we fixed it by convering the sequences to upper-case before analyzing them. 
+#Final version, it detects both, lower and upper cases.
 #!/bin/bash
 seq=$1
 seq=$(echo $seq | tr a-z A-Z)  # upper-case convertion
@@ -13,4 +13,4 @@ if [[ $seq =~ ^[ACGTU]+$ ]]; then
 else
   echo "The sequence is not DNA nor RNA"
 fi
-#we'll check if it works and if it does we will stage and commit the changes
+#we will stage and commit the changes
